@@ -1,17 +1,18 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { TodoModule } from './modules/todo';
+import Todo from './models/todo.entity';
 
 @Module({
   imports: [
     TypeOrmModule.forRoot({
-      type: 'mysql',
+      type: 'postgres',
       host: 'localhost',
       port: 5432,
       username: 'postgres',
       password: 'postgres',
       database: 'todo-database',
-      entities: [__dirname + "/models/*.entity.ts"],
+      entities: [Todo],
       synchronize: true,
     }),
     TodoModule,
