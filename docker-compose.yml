@@ -1,0 +1,29 @@
+version: '3.7'
+
+services:
+  database:
+    container_name: todo_database
+    image: postgres:10
+    ports:
+      - '5432:5432'
+    volumes:
+      - todo-db-volume:/var/lib/postgresql/data
+
+  pgadmin:
+    container_name: pg_admin
+    image: dpage/pgadmin4
+    logging:
+      driver: none
+    ports:
+      - '5555:80'
+    volumes:
+      - todo-pg-volume:/var/lib/pgadmin
+    depends_on:
+      - database
+    environment:
+      PGADMIN_DEFAULT_EMAIL: test@test.com
+      PGADMIN_DEFAULT_PASSWORD: test
+
+volumes:
+  todo-db-volume: {}
+  todo-pg-volume: {}
