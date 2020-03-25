@@ -1,22 +1,4 @@
----
-title: Nest + TypeORM TODO API 만들기
-
-toc: true
-toc_sticky: true
-categories:
-  - backend
-
-tags:
-  - typescript
-  - nestjs
-  - NestJS_빠르게_배우기
-
-thumbnail: https://nestjs.com/img/nest-og.png
----
-
 우선 빠르게 배워봤으니 Nest와 TypeORM을 사용해서 국민 데모 앱 TODO API를 만들어보자. 앤드포인트는 아래와 같이 설계할 생각이다.
-
-<!--more-->
 
 - `GET /todos`: 투두 리스트
 - `POST /todos`: 투두 만들기
@@ -281,7 +263,10 @@ export class AppModule {}
 ![](./images/04.png)
 <small>디테일 결과 확인하기</small>
 
-진행한 TODO API 코드는 여기 [깃헙 레포지토리]()에서 확인할 수 있다.
+![](./images/05.png)
+<small>삭제하기</small>
+
+진행한 TODO API 코드는 여기 [깃헙 레포지토리](https://github.com/changhoi/nestjs-todo-api-demo)에서 확인할 수 있다.
 
 ## 후기
 
@@ -291,4 +276,4 @@ export class AppModule {}
 
 - <https://docs.nestjs.com/techniques/database>
 - <https://docs.nestjs.com/recipes/sql-typeorm>
-- [NestJS 빨리 배우기 시리즈](/posts/backend/nestjs-quicklearn-01)
+- [NestJS 빨리 배우기 시리즈](https://changhoi.github.io/posts/backend/nestjs-quicklearn-01)
